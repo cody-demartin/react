@@ -1,7 +1,9 @@
 @import '~antd/dist/antd.css';
 
 .app {
-    animation: fadeIn 0.75s;
+    animation: fadeIn 0.5s;
+    display: flex;
+    flex-direction: row;
 }
 
 @keyframes fadeIn {
@@ -13,3 +15,4 @@
         opacity: 1;
     }
 }
+

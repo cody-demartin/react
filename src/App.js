@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+// import React, { lazy, Suspense } from 'react';
 import './App.css';
 import SidebarContainer from './components/sidebar/SidebarContainer';
 

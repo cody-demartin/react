@@ -1,2 +1,8 @@
 @import '~antd/dist/antd.css';
 
+.sider {
+    min-width: 55px;
+    max-width: 100px;
+    min-height: 100vh;
+    border-right: 1px solid black;
+}
