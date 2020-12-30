@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+const App = lazy(() => import('./App'));
+
+const renderLoader = () => <p>Loading...</p>;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={renderLoader()}>
+      <App />
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );

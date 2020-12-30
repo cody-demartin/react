@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import './App.css';
-import SidebarContainer from "./components/sidebar/SidebarContainer";
+import SidebarContainer from './components/sidebar/SidebarContainer';
+
 
 const App = () => (
-  <div className="App">
-    <SidebarContainer/>
-  </div>
+    <SidebarContainer />
 );
 
 export default App;
