@@ -2,13 +2,29 @@ import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-const App = lazy(() => import('./App'));
+const App = lazy(() => {
+  return Promise.all([
+    import('./App'),
+    new Promise(resolve => setTimeout(resolve, 1000))
+  ]).then(([moduleExports]) => moduleExports);
+});
 
-const renderLoader = () => <p>Loading...</p>;
+const loadingScreen = () => {
+    return(
+        <div className="loading-container">
+            <div className="loading-c">
+                C
+            </div>
+            <div className="loading-d">
+                D
+            </div>
+        </div>
+    )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={renderLoader()}>
+    <Suspense fallback={loadingScreen()}>
       <App />
     </Suspense>
   </React.StrictMode>,

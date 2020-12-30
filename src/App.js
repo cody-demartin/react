@@ -3,8 +3,12 @@ import './App.css';
 import SidebarContainer from './components/sidebar/SidebarContainer';
 
 
-const App = () => (
-    <SidebarContainer />
-);
+const App = () => {
+  return(
+    <div className="app">
+      <SidebarContainer />
+    </div>
+    )
+}
 
 export default App;
