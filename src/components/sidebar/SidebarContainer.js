@@ -1,8 +1,14 @@
-function SidebarContainer() {
+import { Layout } from "antd";
+
+const { Sider } = Layout
+
+const SidebarContainer = () => {
     return (
-        <div className="sidebarContainer">
-            this is the sidebar
-        </div>
+        <Layout style={{ minHeight: '100vh' }}>
+            <Sider type="primary">
+                Hello
+            </Sider>
+        </Layout>
     )
 }
 

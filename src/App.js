@@ -1,11 +1,11 @@
-import SidebarContainer from './components/sidebar/SidebarContainer';
+import React from 'react';
+import './App.css';
+import SidebarContainer from "./components/sidebar/SidebarContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <SidebarContainer />
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <SidebarContainer/>
+  </div>
+);
 
 export default App;
